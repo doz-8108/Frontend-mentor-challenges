@@ -1,0 +1,79 @@
+.testimonials {
+	padding: 15rem 0;
+	letter-spacing: 2px;
+	display: flex;
+	justify-content: space-evenly;
+	color: var(--color-white);
+
+	@include respond(tab-land) {
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		padding: 15rem;
+	}
+
+	@include respond(tab-port) {
+		padding: 15rem 8vw;
+		padding-bottom: 5rem;
+	}
+
+	&__item {
+		flex: 0 0 25%;
+		background-color: var(--color-primary-testimonials);
+		padding: 4rem 3rem;
+		border-radius: 10px;
+		box-shadow: 0 2rem 5rem rgba(#000, 0.3);
+
+		&:first-child {
+			position: relative;
+
+			&::before {
+				content: url("../images/bg-quotes.png");
+				display: block;
+				position: absolute;
+				width: 7rem;
+				height: 7rem;
+				top: -3rem;
+				left: -1rem;
+				z-index: -1;
+
+				@include respond(phone) {
+					top: -5rem;
+				}
+			}
+		}
+
+		@include respond(tab-land) {
+			&:not(:last-child) {
+				margin-bottom: 5rem;
+			}
+		}
+	}
+
+	&__text {
+		font-size: 1.5rem;
+	}
+}
+
+.user {
+	display: flex;
+	margin-top: 3rem;
+	align-items: center;
+
+	&__avatar {
+		border-radius: 50%;
+		width: 4rem;
+		height: 4rem;
+	}
+
+	&__info {
+		margin-left: 2rem;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__name {
+		font-weight: 700;
+		font-size: 1.5rem;
+	}
+}

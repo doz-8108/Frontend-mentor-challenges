@@ -1,0 +1,53 @@
+.header {
+	font-family: "Raleway", sans-serif;
+	width: 100%;
+	display: flex;
+	padding: 5rem 5vw;
+	align-items: center;
+	background-color: var(--color-primary);
+
+	&__logo-box {
+		flex: 0 0 60%;
+
+		@include respond(tab-port) {
+			flex: 0 0 30%;
+		}
+	}
+
+	&__logo {
+		max-width: 100%;
+	}
+}
+
+.nav {
+	display: flex;
+	margin-left: auto;
+
+	&__link {
+		&:any-link {
+			text-decoration: none;
+			color: var(--color-white-dark);
+			font-size: 1.8rem;
+			transition: all 0.2s;
+
+			@include respond(phone) {
+				font-size: 0.7rem;
+			}
+
+			&:hover {
+				color: var(--color-white);
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-right: 3rem;
+
+			@include respond(tab-port) {
+				margin-right: 1rem;
+			}
+		}
+	}
+}

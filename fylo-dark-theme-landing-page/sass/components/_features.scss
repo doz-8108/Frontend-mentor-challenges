@@ -1,0 +1,47 @@
+.features {
+	position: relative;
+	background-color: var(--color-primary-main);
+	padding: 15rem 0;
+
+	display: grid;
+	justify-content: center;
+	justify-items: center;
+	align-items: center;
+	grid-template-columns: repeat(2, 40rem);
+	gap: 10rem;
+
+	@include respond(tab-port) {
+		row-gap: 8rem;
+		column-gap: 0;
+	}
+
+	@include respond(phone) {
+		grid-template-columns: 1fr;
+	}
+
+	&__item {
+		text-align: center;
+		width: min(40rem, 40vw);
+		color: var(--color-white);
+
+		@include respond(phone) {
+			width: 80%;
+		}
+
+		&-img {
+			height: 10rem;
+
+			img {
+				height: 100%;
+			}
+		}
+	}
+
+	&__heading {
+		margin: 2rem 0;
+	}
+
+	p {
+		font-size: 1.5rem;
+	}
+}

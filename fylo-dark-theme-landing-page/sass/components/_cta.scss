@@ -1,0 +1,85 @@
+.cta {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	height: 30vh;
+
+	&__content {
+		position: absolute;
+		color: var(--color-white);
+		flex-direction: column;
+		background-color: var(--color-primary);
+		width: min(80rem, 80vw);
+		padding: 5rem 4rem;
+		text-align: center;
+		border-radius: 20px;
+		top: 20%;
+
+		@include respond(phone) {
+			top: 50%;
+		}
+
+		p {
+			margin: 3rem 0;
+			font-size: 1.5rem;
+		}
+	}
+
+	&__form {
+		display: flex;
+		justify-content: center;
+
+		@include respond(tab-port) {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&-input {
+			display: flex;
+			flex-direction: column;
+			flex-basis: min(50%, 36rem);
+			position: relative;
+
+			@include respond(tab-port) {
+				width: 100%;
+				margin: 2rem 0;
+			}
+		}
+
+		&-field {
+			padding: 1.5rem 1rem;
+			border-radius: 100px;
+			margin-right: 2rem;
+
+			@include respond(tab-port) {
+				margin-right: 0;
+			}
+
+			&:invalid {
+				& + span {
+					opacity: 1;
+				}
+			}
+
+			&::placeholder {
+				color: rgb(204, 204, 204);
+				padding-left: 2rem;
+			}
+		}
+
+		&-invalid {
+			opacity: 0;
+			visibility: 0;
+			transition: opacity 0.1s;
+			position: absolute;
+			color: var(--color-error);
+			bottom: -2rem;
+			left: 3rem;
+			font-size: 1.3rem;
+
+			@include respond(phone) {
+				bottom: -3rem;
+			}
+		}
+	}
+}
