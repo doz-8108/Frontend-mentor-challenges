@@ -1,0 +1,45 @@
+.btn {
+	background-color: var(--color-moderate-blue);
+	border: none;
+	color: var(--color-white);
+	border-radius: 10px;
+	height: 4rem;
+	width: 10rem;
+	cursor: pointer;
+	transition: background-color 0.2s;
+	font-weight: 700;
+
+	&:hover,
+	&:active {
+		background-color: var(--color-light-grayish-blue);
+	}
+
+	&--edit {
+		margin-right: 2rem;
+		margin-bottom: 2rem;
+		margin-left: auto;
+	}
+
+	&--cancel,
+	&--confirm {
+		width: 15rem;
+		height: 5rem;
+		font-size: 1.8rem;
+		font-weight: 500;
+
+		@media only screen and (max-width: $bp-small) {
+			font-size: 1.6rem;
+			width: 13rem;
+			height: 5rem;
+			font-weight: 700;
+		}
+	}
+
+	&--confirm {
+		background-color: var(--color-soft-red);
+	}
+
+	&--cancel {
+		background-color: var(--color-grayish-blue);
+	}
+}

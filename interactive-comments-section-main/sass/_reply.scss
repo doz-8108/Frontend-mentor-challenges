@@ -1,0 +1,100 @@
+.replies {
+	margin: 0 auto;
+	width: min(80rem, 85vw);
+	position: relative;
+
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		height: 100%;
+		border-left: 3px solid #eee;
+		top: 0;
+		left: 5%;
+
+		@media only screen and (max-width: $bp-small) {
+			left: 0;
+		}
+	}
+
+	&__item {
+		width: min(70rem, 80vw);
+		margin: 0 0 3rem auto;
+
+		@media only screen and (max-width: $bp-small) {
+			margin-left: auto;
+		}
+
+		&--edit {
+			button {
+				grid-column: 3 / -1;
+			}
+		}
+	}
+}
+
+.reply__input {
+	position: relative;
+	z-index: 100;
+	background-color: var(--color-white);
+	width: min(80rem, 85vw);
+	margin: 0 auto;
+	margin-top: -2rem;
+	border-radius: 10px;
+	box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.05);
+	display: flex;
+	justify-content: space-evenly;
+	align-content: flex-start;
+	padding: 2rem 1rem;
+
+	@media only screen and (max-width: $bp-small) {
+		flex-wrap: wrap;
+		align-content: space-between;
+	}
+
+	&-text {
+		flex-basis: 70%;
+		height: 10rem;
+		border: 2px solid var(--color-light-gray);
+		padding-left: 1.5rem;
+		padding-top: 1rem;
+		border-radius: 10px;
+		font-size: 1.7rem;
+		font-family: inherit;
+		resize: none;
+
+		&:focus {
+			outline-color: var(--color-moderate-blue);
+		}
+
+		@media only screen and (max-width: 600px) {
+			flex-basis: 100%;
+			order: -1;
+			margin-bottom: 2rem;
+		}
+	}
+
+	img {
+		width: 4rem;
+		align-self: flex-start;
+		justify-self: flex-start;
+
+		@media only screen and (max-width: $bp-small) {
+			margin-right: auto;
+		}
+	}
+}
+
+.reply__input--nested {
+	width: min(70rem, 70vw);
+	margin: -2rem 0 3rem auto;
+
+	@media only screen and (max-width: $bp-small) {
+		width: min(70rem, 80vw);
+	}
+}
+
+.reply__input--afterReplies {
+	margin: 0 auto;
+	margin-top: 3rem;
+}
