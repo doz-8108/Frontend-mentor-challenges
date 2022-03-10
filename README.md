@@ -4,4 +4,5 @@ Check https://www.frontendmentor.io/challenges to know more
 
 ## Links
 
-- [Fylo landing page](https://mm6677890.github.io/fylo-dark-theme-landing-page/index.html)
+- [Fylo landing page](https://doz-8108.github.io/Frontend-mentor-challenges/fylo-dark-theme-landing-page/index.html)
+- [Interactive comments section](https://doz-8108.github.io/Frontend-mentor-challenges/interactive-comments-section-main/index.html)
