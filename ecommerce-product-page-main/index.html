@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles/styles.css" />
+		<title>Frontend Mentor | E-commerce product page</title>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main-content">
+			<nav class="navbar">
+				<div class="navbar__menu" id="menu">
+					<img src="images/icon-menu.svg" alt="menu" />
+				</div>
+				<div class="navbar__logo-container">
+					<img
+						class="navbar__logo"
+						src="./images/logo.svg"
+						alt="company logo"
+					/>
+				</div>
+				<ul class="navbar__list">
+					<li class="navbar__list-item">
+						<button id="close-menu" class="navbar__close">
+							<img src="images/icon-close-menu.svg" alt="icon" />
+						</button>
+					</li>
+					<li class="navbar__list-item">
+						<a href="#">Collections</a>
+						<div class="navbar__list-item-styler"></div>
+					</li>
+					<li class="navbar__list-item">
+						<a href="#">Men</a>
+						<div class="navbar__list-item-styler"></div>
+					</li>
+					<li class="navbar__list-item">
+						<a href="#">Women</a>
+						<div class="navbar__list-item-styler"></div>
+					</li>
+					<li class="navbar__list-item">
+						<a href="#">About</a>
+						<div class="navbar__list-item-styler"></div>
+					</li>
+					<li class="navbar__list-item">
+						<a href="#">Contact</a>
+						<div class="navbar__list-item-styler"></div>
+					</li>
+				</ul>
+				<div class="navbar__cart-container" id="cart">
+					<button class="navbar__cart" aria-label="shopping cart">
+						<img
+							class="=navbar__cart-icon"
+							src="./images/icon-cart.svg"
+							alt="shopping cart icon"
+						/>
+						<span class="navbar__cart-badge" id="cart-badge">2</span>
+					</button>
+					<div class="basket" id="basket">
+						<p class="basket__title">Cart</p>
+						<hr />
+						<div class="basket__content" id="basket-content">
+							<p class="basket__empty">Your cart is empty.</p>
+						</div>
+					</div>
+				</div>
+				<div class="navbar__avatar-container">
+					<img
+						class="navbar__avatar"
+						src="./images/image-avatar.png"
+						alt="your avatar"
+					/>
+				</div>
+			</nav>
+			<main>
+				<div class="gallery">
+					<button
+						id="prev"
+						class="lightbox__control lightbox__control--prev slider__control--prev"
+					>
+						<div></div>
+					</button>
+					<button
+						id="next"
+						class="lightbox__control lightbox__control--next slider__control--next"
+					>
+						<div></div>
+					</button>
+					<div class="slider" id="slider">
+						<div class="slider__photo-container" id="photo-1">
+							<img
+								src="./images/image-product-1.jpg"
+								alt="product photo 1"
+							/>
+						</div>
+						<div class="slider__photo-container" id="photo-2">
+							<img
+								src="./images/image-product-2.jpg"
+								alt="product photo 2"
+							/>
+						</div>
+						<div class="slider__photo-container" id="photo-1">
+							<img
+								src="./images/image-product-3.jpg"
+								alt="product photo 3"
+							/>
+						</div>
+						<div class="slider__photo-container" id="photo-4">
+							<img
+								src="./images/image-product-4.jpg"
+								alt="product photo 4"
+							/>
+						</div>
+					</div>
+					<div class="thumbnails">
+						<div
+							class="thumbnails__photo-container thumbnails__photo-container--selected"
+							id="thumbnail"
+							data-id="1"
+						>
+							<img
+								src="./images/image-product-1-thumbnail.jpg"
+								alt="tumbnail photo 1"
+							/>
+						</div>
+						<div
+							class="thumbnails__photo-container"
+							id="thumbnail"
+							data-id="2"
+						>
+							<img
+								src="./images/image-product-2-thumbnail.jpg"
+								alt="tumbnail photo 2"
+							/>
+						</div>
+						<div
+							class="thumbnails__photo-container"
+							id="thumbnail"
+							data-id="3"
+						>
+							<img
+								src="./images/image-product-3-thumbnail.jpg"
+								alt="tumbnail photo 3"
+							/>
+						</div>
+						<div
+							class="thumbnails__photo-container"
+							id="thumbnail"
+							data-id="4"
+						>
+							<img
+								src="./images/image-product-4-thumbnail.jpg"
+								alt="tumbnail photo 4"
+							/>
+						</div>
+					</div>
+				</div>
+				<div class="purchase">
+					<h2>Sneaker Company</h2>
+					<h1>Fall Limited Edition Sneakers</h1>
+					<p>
+						These low-profile sneakers are your perfect casual wear
+						companion. Featuring a durable rubber outer sole, they’ll
+						withstand everything the weather can offer.
+					</p>
+					<div class="price">
+						<div>
+							<span class="price__amount">$125.00</span
+							><span class="price__discount">50%</span>
+						</div>
+						<span class="price__original">$250.00</span>
+					</div>
+					<div class="action">
+						<div>
+							<button
+								class="action__button action__button--minus"
+								aria-label="remove one item"
+								id="minus"
+							>
+								<img
+									src="images/icon-minus.svg"
+									alt="remove one item icon"
+								/>
+							</button>
+							<span class="action__display" id="qty-display">0</span>
+							<button
+								class="action__button action__button--plus"
+								aria-label="add one item"
+								id="add"
+							>
+								<img
+									src="images/icon-plus.svg"
+									alt="add one item icon"
+								/>
+							</button>
+						</div>
+						<button
+							class="action__addToCart"
+							aria-label="add to cart"
+							data-productId="1"
+							id="checkout"
+						>
+							<img src="images/icon-cart-button.svg" alt="cart icon" />
+							<span>Add to cart</span>
+						</button>
+					</div>
+				</div>
+			</main>
+		</div>
+
+		<div class="lightbox">
+			<div class="gallery gallery--lightbox">
+				<button id="prev" class="lightbox__control lightbox__control--prev">
+					<div></div>
+				</button>
+				<div class="slider" id="slider">
+					<div class="slider__photo-container" id="photo-1">
+						<img
+							src="./images/image-product-1.jpg"
+							alt="product photo 1"
+						/>
+					</div>
+					<div class="slider__photo-container" id="photo-2">
+						<img
+							src="./images/image-product-2.jpg"
+							alt="product photo 2"
+						/>
+					</div>
+					<div class="slider__photo-container" id="photo-1">
+						<img
+							src="./images/image-product-3.jpg"
+							alt="product photo 3"
+						/>
+					</div>
+					<div class="slider__photo-container" id="photo-4">
+						<img
+							src="./images/image-product-4.jpg"
+							alt="product photo 4"
+						/>
+					</div>
+				</div>
+				<div class="thumbnails">
+					<div
+						class="thumbnails__photo-container thumbnails__photo-container--selected"
+						id="thumbnail"
+						data-id="1"
+					>
+						<img
+							src="./images/image-product-1-thumbnail.jpg"
+							alt="tumbnail photo 1"
+						/>
+					</div>
+					<div
+						class="thumbnails__photo-container"
+						id="thumbnail"
+						data-id="2"
+					>
+						<img
+							src="./images/image-product-2-thumbnail.jpg"
+							alt="tumbnail photo 2"
+						/>
+					</div>
+					<div
+						class="thumbnails__photo-container"
+						id="thumbnail"
+						data-id="3"
+					>
+						<img
+							src="./images/image-product-3-thumbnail.jpg"
+							alt="tumbnail photo 3"
+						/>
+					</div>
+					<div
+						class="thumbnails__photo-container"
+						id="thumbnail"
+						data-id="4"
+					>
+						<img
+							src="./images/image-product-4-thumbnail.jpg"
+							alt="tumbnail photo 4"
+						/>
+					</div>
+				</div>
+				<button id="next" class="lightbox__control lightbox__control--next">
+					<div></div>
+				</button>
+				<button id="close-lightbox" class="lightbox__close">
+					<div></div>
+				</button>
+			</div>
+		</div>
+
+		<div class="attribution" style="margin-top: 15vh">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">Doz</a>.
+		</div>
+	</body>
+
+	<script src="./script.js"></script>
+</html>

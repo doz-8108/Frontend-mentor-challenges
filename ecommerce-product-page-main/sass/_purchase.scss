@@ -1,0 +1,130 @@
+.purchase {
+	margin: 5rem 0 0 15%;
+
+	@media only screen and (max-width: 1024px) {
+		margin: 5rem 5% 0 5%;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+		text-transform: uppercase;
+		letter-spacing: 0.2rem;
+		color: var(--color-primary);
+	}
+
+	h1 {
+		font-size: 4.5rem;
+
+		@media only screen and (max-width: 375px) {
+			font-size: 3.5rem;
+		}
+	}
+
+	p {
+		margin-top: 3rem;
+		font-size: 1.6rem;
+		color: var(--color-secondary-light-1);
+	}
+}
+
+.price {
+	display: flex;
+	flex-direction: column;
+	margin: 3rem 0;
+	font-weight: 700;
+
+	@media only screen and (max-width: 375px) {
+		flex-direction: row;
+		align-items: center;
+	}
+
+	& > div {
+		display: flex;
+		align-items: center;
+	}
+
+	&__amount {
+		font-size: 3rem;
+	}
+
+	&__discount {
+		margin-left: 2rem;
+		font-size: 1.6rem;
+		color: var(--color-primary);
+		background-color: var(--color-primary-light);
+		padding: 0.2rem 0.8rem;
+		border-radius: 10px;
+	}
+
+	&__original {
+		text-decoration: line-through;
+		color: var(--color-secondary-light-2);
+		font-size: 1.6rem;
+
+		@media only screen and (max-width: 375px) {
+			margin-left: auto;
+		}
+	}
+}
+
+.action {
+	display: flex;
+	justify-content: space-between;
+
+	@media only screen and (max-width: 375px) {
+		flex-direction: column;
+	}
+
+	div {
+		flex-basis: 30%;
+		background-color: var(--color-white-1);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-radius: 10px;
+		padding: 1.5rem 2rem;
+	}
+
+	&__button {
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+
+		&--minus {
+			margin-bottom: 0.5rem;
+		}
+	}
+
+	&__display {
+		font-weight: 700;
+		font-size: 1.5rem;
+	}
+
+	&__addToCart {
+		flex-basis: 65%;
+		border: none;
+		border-radius: 10px;
+		background-color: var(--color-primary);
+		color: var(--color-white-1);
+		font-weight: 700;
+		font-size: 1.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		box-shadow: 0 7px 15px 10px var(--color-primary-light);
+
+		@media only screen and (max-width: 375px) {
+			margin-top: 2rem;
+			padding: 2rem;
+		}
+
+		&:hover {
+			opacity: 0.5;
+		}
+
+		img {
+			margin-right: 1.5rem;
+		}
+	}
+}

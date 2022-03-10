@@ -1,0 +1,12 @@
+{
+	"name": "ecommerce-product-page-main",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"watch:sass": "sass sass/main.scss styles/styles.css --watch"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
+}
