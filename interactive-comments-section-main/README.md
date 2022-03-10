@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
--  Solution URL: [](https://github.com/mm6677890/Frontend-Mentor-Challenges/tree/master/interactive-comments-section#links)
+-  Solution URL: [here](https://github.com/mm6677890/Frontend-Mentor-Challenges/tree/master/interactive-comments-section#links)
 
 ### Built with
 
