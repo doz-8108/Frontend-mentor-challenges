@@ -1,6 +1,6 @@
 let photos = document.querySelectorAll("main div[id^='photo']");
 let slider = document.querySelector("main .slider");
-let thumbnails = document.querySelectorAll("main #thumbnail");
+let thumbnails = document.querySelectorAll("main [id^='thumbnail']");
 
 let basket = document.getElementById("basket");
 let basketContent = document.getElementById("basket-content");
@@ -14,7 +14,7 @@ let lightbox = document.querySelector(".lightbox");
 let lightboxSlider = document.querySelector(".lightbox .slider");
 let lightboxPhotos = document.querySelectorAll(".lightbox div[id^='photo']");
 let lightboxThumbnails = document.querySelectorAll(
-	".lightbox #thumbnail-lightbox"
+	".lightbox [id^='thumbnail-lightbox']"
 );
 let closeLightbox = document.querySelector(".lightbox__close");
 let prev = document.querySelectorAll("[id^='prev']");
