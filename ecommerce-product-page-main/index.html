@@ -102,13 +102,13 @@
 						id="prev"
 						class="lightbox__control lightbox__control--prev slider__control--prev"
 					>
-						<div></div>
+						<span></span>
 					</button>
 					<button
 						id="next"
 						class="lightbox__control lightbox__control--next slider__control--next"
 					>
-						<div></div>
+						<span></span>
 					</button>
 					<div class="slider" id="slider">
 						<div class="slider__photo-container" id="photo-1">
@@ -123,7 +123,7 @@
 								alt="product photo 2"
 							/>
 						</div>
-						<div class="slider__photo-container" id="photo-1">
+						<div class="slider__photo-container" id="photo-3">
 							<img
 								src="./images/image-product-3.jpg"
 								alt="product photo 3"
@@ -234,29 +234,32 @@
 
 		<div class="lightbox">
 			<div class="gallery gallery--lightbox">
-				<button id="prev" class="lightbox__control lightbox__control--prev">
-					<div></div>
+				<button
+					id="prev-lightbox"
+					class="lightbox__control lightbox__control--prev"
+				>
+					<span></span>
 				</button>
-				<div class="slider" id="slider">
-					<div class="slider__photo-container" id="photo-1">
+				<div class="slider" id="slider-lightbox">
+					<div class="slider__photo-container" id="photo-1-lightbox">
 						<img
 							src="./images/image-product-1.jpg"
 							alt="product photo 1"
 						/>
 					</div>
-					<div class="slider__photo-container" id="photo-2">
+					<div class="slider__photo-container" id="photo-2-lightbox">
 						<img
 							src="./images/image-product-2.jpg"
 							alt="product photo 2"
 						/>
 					</div>
-					<div class="slider__photo-container" id="photo-1">
+					<div class="slider__photo-container" id="photo-3-lightbox">
 						<img
 							src="./images/image-product-3.jpg"
 							alt="product photo 3"
 						/>
 					</div>
-					<div class="slider__photo-container" id="photo-4">
+					<div class="slider__photo-container" id="photo-4-lightbox">
 						<img
 							src="./images/image-product-4.jpg"
 							alt="product photo 4"
@@ -266,7 +269,7 @@
 				<div class="thumbnails">
 					<div
 						class="thumbnails__photo-container thumbnails__photo-container--selected"
-						id="thumbnail"
+						id="thumbnail-lightbox"
 						data-id="1"
 					>
 						<img
@@ -276,7 +279,7 @@
 					</div>
 					<div
 						class="thumbnails__photo-container"
-						id="thumbnail"
+						id="thumbnail-lightbox"
 						data-id="2"
 					>
 						<img
@@ -286,7 +289,7 @@
 					</div>
 					<div
 						class="thumbnails__photo-container"
-						id="thumbnail"
+						id="thumbnail-lightbox"
 						data-id="3"
 					>
 						<img
@@ -296,7 +299,7 @@
 					</div>
 					<div
 						class="thumbnails__photo-container"
-						id="thumbnail"
+						id="thumbnail-lightbox"
 						data-id="4"
 					>
 						<img
@@ -305,16 +308,19 @@
 						/>
 					</div>
 				</div>
-				<button id="next" class="lightbox__control lightbox__control--next">
-					<div></div>
+				<button
+					id="next-lightbox"
+					class="lightbox__control lightbox__control--next"
+				>
+					<span></span>
 				</button>
 				<button id="close-lightbox" class="lightbox__close">
-					<div></div>
+					<span></span>
 				</button>
 			</div>
 		</div>
 
-		<div class="attribution" style="margin-top: 15vh">
+		<div class="attribution" style="margin-top: 15vh; margin-bottom: 5vh">
 			Challenge by
 			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
 				>Frontend Mentor</a

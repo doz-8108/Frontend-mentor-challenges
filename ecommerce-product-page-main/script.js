@@ -13,10 +13,12 @@ let cartIcon = document.getElementById("cart");
 let lightbox = document.querySelector(".lightbox");
 let lightboxSlider = document.querySelector(".lightbox .slider");
 let lightboxPhotos = document.querySelectorAll(".lightbox div[id^='photo']");
-let lightboxThumbnails = document.querySelectorAll(".lightbox #thumbnail");
+let lightboxThumbnails = document.querySelectorAll(
+	".lightbox #thumbnail-lightbox"
+);
 let closeLightbox = document.querySelector(".lightbox__close");
-let prev = document.querySelectorAll("#prev");
-let next = document.querySelectorAll("#next");
+let prev = document.querySelectorAll("[id^='prev']");
+let next = document.querySelectorAll("[id^='next']");
 
 let sideNav = document.querySelector(".navbar__list");
 let menu = document.getElementById("menu");
@@ -138,11 +140,25 @@ function onCartLeave() {
 	basket.style.opacity = 0;
 }
 
+function suspendBodyScroll() {
+	document.body.style.overflowY = "hidden";
+}
+
+function allowBodyScroll() {
+	document.body.style.overflowY = "scroll";
+}
+
 function showLightbox() {
 	if (window.matchMedia("(min-width: 1024px)").matches) {
 		lightbox.style.display = "flex";
 		lightboxPhotos[currentPhotoIndex].scrollIntoView();
+		suspendBodyScroll();
 	}
+}
+
+function hideLightbox() {
+	lightbox.style.display = "none";
+	allowBodyScroll();
 }
 
 function prevPhotoLightbox(action) {
@@ -155,10 +171,6 @@ function nextPhotoLightBox(action) {
 	currentPhotoIndex = Math.min(3, currentPhotoIndex + action);
 	switchPhoto();
 	alterThumbnailsStyle();
-}
-
-function hideLightbox() {
-	lightbox.style.display = "none";
 }
 
 function adjustElements() {
